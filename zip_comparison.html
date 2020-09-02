@@ -3,14 +3,18 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>KC Crime Analysis</title>
+        <title>Population by Zip Code</title>
         
         <!--Bootstrap links-->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         
+        <!--Bootstrap links-->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
         <!--CSS link-->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
     </head>
       
     <header>
@@ -26,7 +30,7 @@
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="yearly_comparison.html">Yearly Trends</a>
+                  <a class="nav-link" href="wanted.html">Scrape</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="zipcode_compare.html">Neighborhood Trends</a>
@@ -40,31 +44,14 @@
     </header>
 
     <body>
-      <div class="container">
-        <div class="row">
-              <section id="header">
-              <div class="col-md-12">
-                  <h1>Population per Zip Code and Crime</h1>
-              </div>
-              </section>
-          </div>
-
-          <div class="row">
-              <!-- <section id="comp_paragraph"> -->
-              <div class="col-md-12">
-                  <p></p>
-                  <div id="plot"></div>
-              </div>
-              <!-- </section> -->
-          </div>
-      </div>
-
+      <div id="plot"></div>
+    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
       <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
       <script src="https://d3js.org/d3.v5.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
-      
-      <!-- <script src="/static/js/final_pop.js"></script> -->
+
+      <script src="/static/js/final_pop.json"></script>
       <script src="/static/js/bar_chart.js"></script>
     </body>
     </html>
